@@ -2,24 +2,24 @@ import React from 'react'
 import LiAnchor from '../Li&Anchor/LiAnchor.jsx'
 
 const links = [
-    {value: '#', content: 'Link 1', id: '1'},
-    {value: '#', content: 'Link 2', id: '2'},
-    {value: '#', content: 'Link 3', id: '3'},
-    {value: '#', content: 'Link 4', id: '4'}
+    { value: '#', content: 'Home', id: '1' },
+    { value: '#', content: 'Cities', id: '2' },
 ]
-
 
 const Nav = () => {
     return (
-        <nav>
-            <ul className='flex gap-4'>
-                {
-                    links.map ((link, indice) =>{
-                        return <LiAnchor key={indice} value= {link.value} content= {link.content}/>
-                    })   
-                }
-            </ul>
-        </nav>
+        <div className=''>
+            <nav className='relative right-8'>
+                <ul className='flex gap-14'>
+                    {
+                        links.map((link, indice) => {
+                            return <LiAnchor key={indice} value={link.value} content={link.content} />
+                        })
+                    }
+                </ul>
+            </nav>
+        </div>
+
     )
 }
 

@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './App.css'
-import NavBar from './components/NavBar/NavBar'
+import Main from './layouts/MainLayout/Main.jsx'
+import Index from './pages/index/index.jsx'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full bg-blue-500 min-h-screen flex flex-col'>
-      <NavBar />
-    
-    </div>
+      <>
+      <Main>
+        <Index />
+      </Main>
+      </>
+      
   )
 }
 
