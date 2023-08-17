@@ -1,5 +1,5 @@
 import React from 'react'
-import LiAnchor from '../Li&Anchor/LiAnchor.jsx'
+import LiAnchor from './LiAnchor.jsx'
 
 const links = [
     { value: '#', content: 'Home', id: '1' },

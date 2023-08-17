@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Main from './layouts/MainLayout/Main.jsx'
+import Main from './layouts/Main.jsx'
 import Index from './pages/index/index.jsx'
 
 
@@ -13,6 +12,7 @@ function App() {
       <Main>
         <Index />
       </Main>
+      
       </>
       
   )
