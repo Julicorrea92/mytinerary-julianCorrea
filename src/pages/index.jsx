@@ -1,7 +1,7 @@
 import { React } from 'react'
-import reactLogo from '../../../src/assets/pexels-saurabh-pandey-17685123.jpg'
-import Button from '../../components/Button.jsx'
-import CarouselIndex from '../../components/CarouselIndex.jsx'
+import reactLogo from '../assets/pexels-saurabh-pandey-17685123.jpg'
+import Button from '../components/Button.jsx'
+import CarouselIndex from '../components/CarouselIndex.jsx'
 
 
 const Index = () => {

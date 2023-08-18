@@ -1,9 +1,13 @@
 import React from 'react'
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
+import { Outlet } from 'react-router-dom'
 
 
-const Main = ({ children }) => {
+
+const Main = () => {
+
+
   return (
     <>
       <div className='w-full min-h-screen flex flex-col relative '>
@@ -11,12 +15,11 @@ const Main = ({ children }) => {
           <NavBar />
         </div>
         <div className='flex-grow'>
-          {children}
+          <Outlet />
         </div>
       </div>
       <Footer />
     </>
   )
 }
-
-export default Main
+export default Main;

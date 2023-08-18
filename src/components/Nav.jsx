@@ -1,9 +1,10 @@
 import React from 'react'
 import LiAnchor from './LiAnchor.jsx'
+import { Link as Anchor, NavLink } from 'react-router-dom'
 
 const links = [
-    { value: '#', content: 'Home', id: '1' },
-    { value: '#', content: 'Cities', id: '2' },
+    { value: '/', content: 'Home', id: '1' },
+    { value: '/cities', content: 'Cities', id: '2' },
 ]
 
 const Nav = () => {

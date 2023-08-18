@@ -142,7 +142,7 @@ const CarouselIndex = () => {
             setIndex(0)
           }
 
-        }, 4000)
+        }, 3500)
         return () => {
           clearInterval(timer)
         }

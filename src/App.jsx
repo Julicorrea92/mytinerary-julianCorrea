@@ -1,18 +1,51 @@
-import { useState } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
 import Main from './layouts/Main.jsx'
-import Index from './pages/index/index.jsx'
+import Index from './pages/index.jsx'
+import Cities from './pages/Cities.jsx'
+import Component404 from './components/Component404'
+
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <Main/>,
+    children:[
+      {
+        path:'/', 
+      element:<Index/>
+    },
+      {
+        path:'/cities', 
+      element:<Cities/>
+    },
+      {
+        path:'/cities/:miVariable',
+    element:<Cities/>
+  },
+      {
+        path:'*',
+    element:<Component404/>
+  }
+    ]
+  },
+  {
+    
+  }
+  
+
+])
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
       <>
-      <Main>
-        <Index />
-      </Main>
-      
+        <RouterProvider router={router}/>
+
+
       </>
       
   )
