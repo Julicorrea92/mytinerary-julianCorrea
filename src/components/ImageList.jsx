@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import Arrow from './Arrow';
+import React from 'react'
 
-const CarouselIndex = () => {
-    const [index, setIndex] = useState(0);
+const ImageList = () => {
+
+    const putId = ()=>{
+
+    }//ver como puedo poner un indice a cada ciudad
+
     const cities = [
         {
             country: "Cambodia",
@@ -126,55 +129,30 @@ const CarouselIndex = () => {
             featuredLocation: "Salah Al Din"
         },
     ]
-    const handlePrev = () => {
-        index > 0 ? setIndex(index - 4) : setIndex(8);
-    }
 
-    const handleNext = () => {
-        index < 8 ? setIndex(index + 4) : setIndex(0);
-    }
-
-      useEffect(() => {
-        const timer = setInterval(() => {
-          if (index < 8) {
-            setIndex(index + 4)
-          } else {
-            setIndex(0)
-          }
-
-        }, 3500)
-        return () => {
-          clearInterval(timer)
-        }
-      }, [index]) 
 
     return (
-<>
-  <div className='bg-white text-center flex justify-center'>
-    <h2 className='py-3 my-4 text-center text-bold text-3xl drop-shadow-darkShadow mb-2 w-3/4 md:w-full'>Popular MyTineraries</h2>
-  </div>
-  <div className='bg-white flex justify-center min-h-[60vh] max-w-full mb-4 relative'>
-    <Arrow className='absolute transform -translate-y-1/2 top-1/2' src="https://cdn-icons-png.flaticon.com/512/109/109618.png" alt='flecha-i' fn={handlePrev} />
-    <div className='h-[70vh] w-5/6 grid sm:grid-rows-2 grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 mb-3 mt-2'>
-      {[0, 1, 2, 3].map((i) => (
-        <a key={i} className='block group relative rounded-md'>
-          <img
-            className='absolute rounded-md inset-0 object-cover object-center h-full w-full'
-            src={cities[index + i].photo}
-            alt={cities[index + i].city}
-          />
-          <div className='absolute bottom-0 left-0 w-full p-2 bg-black bg-opacity-50 text-white text-center'>
-            <p className='text-sm font-bold'>{cities[index + i].city}</p>
-            <p className='text-xs'>{cities[index + i].country}</p>
-          </div>
-        </a>
-      ))}
-    </div>
-    <Arrow className='absolute transform translate-y-1/2' src="https://cdn-icons-png.flaticon.com/512/109/109617.png" alt='flecha-d' fn={handleNext} />
-  </div>
-</>
-    )
 
-
+        <div className="flex flex-col gap-4">
+            {cities.map((city, index) => (
+                <a key={index} className="block group relative rounded-md">
+                    <img
+                        className='absolute rounded-md inset-0 object-cover object-center h-full w-full'
+                        src={cities[index].photo}
+                        alt={cities[index].city}
+                    />
+                    <div className='absolute bottom-0 left-0 w-full p-2 bg-black bg-opacity-50 text-white text-center'>
+                        <p className='text-sm font-bold'>{cities[index].city}</p>
+                        <p className='text-xs'>{cities[index].country}</p>
+                    </div>
+                </a>
+    ))
 }
-export default CarouselIndex;
+            </div >
+        );
+        };
+
+
+
+
+export default ImageList;
