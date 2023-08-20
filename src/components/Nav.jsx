@@ -1,6 +1,5 @@
 import React from 'react'
 import LiAnchor from './LiAnchor.jsx'
-import { Link as Anchor, NavLink } from 'react-router-dom'
 
 const links = [
     { value: '/', content: 'Home', id: '1' },
@@ -20,7 +19,6 @@ const Nav = () => {
                 </ul>
             </nav>
         </div>
-
     )
 }
 

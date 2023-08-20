@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
-import Main from './layouts/Main.jsx'
+import Main from './layouts/MainLayout.jsx'
 import Index from './pages/index.jsx'
 import Cities from './pages/Cities.jsx'
 import Component404 from './components/Component404'
