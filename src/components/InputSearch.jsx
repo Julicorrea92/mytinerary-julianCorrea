@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputSearch = ({className, type, value}) => {
+const InputSearch = ({className,  value, onChange}) => {
 
 
 
@@ -9,7 +9,8 @@ const InputSearch = ({className, type, value}) => {
     className={className}
     type='text'
     value={value}
-    placeholder="Search..."
+    placeholder="Let's go!"
+    onChange={onChange}
   />  
   )
 }

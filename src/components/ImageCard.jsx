@@ -1,6 +1,8 @@
 import React from 'react'
 
-const ImageCard = ({photo, city, country}) => {
+const ImageCard = ({ data }) => {
+
+    const {photo, city, country} = data
 
     return (
         <div className='flex flex-col w-5/6 justify-center items-center'>
@@ -10,7 +12,7 @@ const ImageCard = ({photo, city, country}) => {
                 <h3 className='text-center text-[1rem] font-bold mb-1'>{country}</h3>
             </div>
         </div>
-        )
-    }
+    )
+}
 
 export default ImageCard;

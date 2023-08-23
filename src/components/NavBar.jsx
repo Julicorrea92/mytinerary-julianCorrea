@@ -8,7 +8,6 @@ import Button from './Button.jsx'
 const NavBar = () => {
   return (
     <header className='flex h-[10vh] items-center px-4 justify-between bg-transparent relative z-10'>
-
       <nav className='flex  justify-center items-center h-full'>
         <Icon className='h-12 p-4' icon={faEarthAmericas} />
         <h1 className='md:block font-semibold md:text-lg lg:text-xl"'>MyTinerary</h1>

@@ -1,5 +1,4 @@
 import { React } from 'react'
-import reactLogo from '../assets/pexels-saurabh-pandey-17685123.jpg'
 import Button from '../components/Button.jsx'
 import CarouselIndex from '../components/CarouselIndex.jsx'
 import { Link as Anchor } from 'react-router-dom'

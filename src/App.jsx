@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       element:<Cities/>
     },
       {
-        path:'/cities/:miVariable',
+        path:'cities/:id',
     element:<Cities/>
   },
       {
